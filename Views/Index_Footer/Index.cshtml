@@ -1,0 +1,27 @@
+﻿@model Goldcrest_WEB_CMS.Models.Class1
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+<h2>Update Footer Content</h2>
+
+@using (Html.BeginForm("UpdateFooterContent", "Index_Footer", FormMethod.Post))
+{
+    <div class="form-group">
+        <label for="newContent">New Content:</label>
+        <textarea class="form-control" id="newContent" name="newContent" rows="3"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Update</button>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
